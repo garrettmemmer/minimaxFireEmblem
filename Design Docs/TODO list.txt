@@ -1,0 +1,104 @@
+TODOs
+	Menu:
+		Disabled menu options
+	
+	SceneManager:
+		Incorporate DialogueScene.
+	
+	MapScene:
+		Other turn events
+		Win condition: Priority Target
+		Win condition: Capture
+		
+	
+	Unit:
+		isEqupable
+		numAttacks
+		
+	Terrain:
+		processSpecialEffects
+		
+	UnitActionMenu:
+		checkCommands
+	
+	FightUI:
+		Graphics
+	
+	AI: 
+		Everything
+		
+	DialogScene:
+		Text animations
+		Fade out when not talking
+		Graphics logic is nonsense right now.
+	
+	HQScene:
+		Support
+	
+	SystemActionMenu
+		Units
+		Options
+		Battle Save
+		
+	ItemActionMenu:
+		Limit actions to available actions.
+		Better movement control.
+	
+	ShopScene
+		Selling
+		
+	Select Units:
+		There's no reason to have to press confirm.
+	
+	Other
+		Visually design all menus
+		Non-healing Staff logic
+		Non-"basic healing" Usables
+		Skills
+		Terrain Special Effects
+		Gamve Over
+		Victory
+		Intro screen
+		
+	Sound:
+		The whole dang sound engine
+		
+	Graphics:
+		Need some.
+		
+	
+Current TODO Stack:
+	Vulnerary and other healing items
+	
+		
+
+BUGS:
+	Can't remove units from selectedEnemyRange
+	Ally move range doesn't look good enough
+	Upleft into an enemy unit, the straight up (all within areas you could normally reach) causes the movement arrow to go straight through the enemy unit. (Fix diagonals)
+	When determining which enemies are in range, the game only checks the equipped weapon.
+	Resize isn't working again.
+
+	
+Fixed Bugs:
+	60fps? -- major Jittery map movement: 1000/60 was an int,
+	Camera movement could use a better algorithm -- Camera movement now has a speed limit. All else was fine.
+	Pressing L while the cursor is on a unit, the L input doesn't care. Which can lead to an L press going nowhere. Set last unit to hovered unit
+	cursor doesn't bump anymore (delay after first move, which allows for more precise movement)
+	movementArrow Diagonals don't quite work (remove diagonals)
+	During moveMode, pressing A outside the move range shouldn't do anything.
+	Pressing B from 6 runs the same frame of UnitActionBox again
+	Pressing up and right in quick succession does not queue up a right command unless another up command was pressed. -- Pressing buttons in quick succession should now queue up commands
+
+	
+Discarded Bugs:
+	(?) Reweight can crash if it goes out of bounds, but it never should. If this actually ever happens, create a reset button for mapscene.
+	Pathfinding really shouldn't need to see mapscene. Maybe move the unit list into map?
+	resizing has weird effects sometimes. This may not matter, as you should never be able to resize ingame anyway.
+
+
+Maybe Someday:
+	Unit speed on button press
+	Escape exits dialogue quickly.
+	Escape opens up a "Do you want to quit" menu on mapscene
+	

@@ -1,0 +1,7 @@
+Items
+Shop
+Skills
+Support
+Info (News/Conversations)
+Save
+End
